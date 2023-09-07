@@ -1,0 +1,46 @@
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #eee;
+  background-color: #232323;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(28, 27, 27);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #DE3163;
+  border-radius: 20px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: rgb(28, 27, 27);
+}
+
+button,
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+
