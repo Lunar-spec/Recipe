@@ -38,7 +38,8 @@ const Footer = () => {
                 </div>
 
                 <div className="copyright">
-                    ©Copyright 2023 Spice Chef
+                    <hr />
+                    © 2023 Spice Chef - All rights reserved
                 </div>
             </div>
         </div>

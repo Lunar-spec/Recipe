@@ -2,6 +2,8 @@
     // height: 14rem;
     // background: #333;
     // bottom: 0;
+    // width: 100vw;
+    padding: 1rem;
 
     .first-section {
         form {
@@ -16,7 +18,7 @@
                 padding: 0;
 
                 input {
-                    padding: 0.4rem;
+                    padding: 0.7rem 1rem;
                     outline: none;
                     border: none;
                     border-top-left-radius: 0.1rem;
@@ -26,7 +28,7 @@
                 }
 
                 button {
-                    padding: 0.4rem;
+                    padding: 0.7rem 1rem;
                     outline: none;
                     border: none;
                     border-left: 0;
@@ -64,6 +66,16 @@
                 gap: 0;
                 line-height: 1.5rem;
                 letter-spacing: 0.12rem;
+
+                a {
+                    border-bottom: 0.1rem solid transparent;
+                    transition: .3s ease-out;
+                }
+
+                a:hover {
+                    // text-decoration: underline;
+                    border-bottom: 0.1rem solid #E0144C;
+                }
             }
 
             .socials {

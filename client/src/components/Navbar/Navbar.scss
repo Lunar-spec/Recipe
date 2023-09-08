@@ -1,15 +1,22 @@
 .navbar {
-    height: 2rem;
-    // background: rgb(59, 59, 59); 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
+    padding: .5rem 1rem;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 9;
+    min-width: 98%;
+    transition: .3s ease;
+}
+
+.nav-bg {
+    background-color: #232323f8;
+    filter: drop-shadow(0 0 10px #7676765f);
 }
 
 .logo {
     display: flex;
-    // position: relative;
     align-items: center;
     text-align: center;
     font-weight: 600;
@@ -25,7 +32,6 @@
 }
 
 .icon {
-    // position: absolute;
     right: 1rem;
     transform: rotate(45deg);
     color: #DE3163;
@@ -45,7 +51,6 @@
         color: #DE3163;
     }
 }
-
 
 .logout {
     padding: .4rem 1rem;

@@ -1,43 +1,9 @@
 .wrapper {
-  max-width: 1536px;
-  margin: 0 auto;
-  // padding: 2rem;
+  // max-width: 1536px;
   text-align: center;
-  padding: 0 5rem;
-}
-
-@media screen and (max-width: 1536px) {
-  .wrapper {
-    max-width: 1366px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .wrapper {
-    max-width: 1024px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    max-width: 768px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    max-width: 768px;
-    padding: 0 2.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrapper {
-    max-width: 640px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .wrapper {
-    max-width: 640px;
-    padding: 0rem;
-  }
+  margin: 0 auto;
+  text-align: center;
+  // padding: 0 5rem;
+  position: relative;
+  z-index: 0;
 }
