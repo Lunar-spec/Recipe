@@ -67,6 +67,27 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        gap: 8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        justify-content: center;
+        gap: 24rem;
+    }
+}
+
+@media screen and (max-width: 844px) {
+    .navbar {
+        justify-content: center;
+        gap: 8rem;
+    }
+}
+
 @media screen and (max-width: 640px) {
     .navbar {
         padding: 1rem;
