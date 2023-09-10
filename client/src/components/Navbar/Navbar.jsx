@@ -1,7 +1,10 @@
 import { LuChefHat } from 'react-icons/lu'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
+
 import './Navbar.scss'
+import { ThemeContext } from '../../context/ThemeContext'
 
 const links = [
     {
@@ -23,6 +26,8 @@ const links = [
 
 const Navbar = () => {
 
+    const { mode } = useContext(ThemeContext)
+
     const [navBg, setNavBg] = useState(false)
 
     const changeColor = () => {
@@ -36,14 +41,14 @@ const Navbar = () => {
     window.addEventListener('scroll', changeColor)
 
     return (
-        <div className="navbar-container">
-            <div className={navBg ? 'navbar nav-bg' : 'navbar'}>
+        <div className={"navbar-container"}>
+            <div className={`${navBg ? `navbar ${mode === 'light' ? 'bg-light' : 'bg-dark'}` : 'navbar'}`}>
                 <Link to={'/'} className='logo'>
                     Spice Chef
                     <LuChefHat size={32} strokeWidth={1} className='icon' />
                 </Link>
                 <div className='links'>
-                    {/* <DarkModeToggle /> */}
+                    <DarkModeToggle />
                     {links.map(link => (
                         <Link key={link.id} to={link.url} className='link'>
                             {link.title}

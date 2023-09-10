@@ -14,6 +14,7 @@ import Blogs from './pages/Blogs/Blogs'
 import Blog from './pages/Blog/Blog'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   // const [loading, setLoading] = useState(true)
@@ -27,10 +28,10 @@ function App() {
   const Layout = () => {
     return (
       <div className="content-container">
-        <Navbar/>
+        <Navbar />
         <Outlet />
         <ScrollRestoration />
-        <Footer/>
+        <Footer />
       </div>
     )
   }
@@ -42,51 +43,51 @@ function App() {
   //   }
   //   return children
   // }
-  
+
   const router = createBrowserRouter([
     {
       path: '/',
       element:
-        <Layout/>,
+        <Layout />,
       // element: <ProtectedRoute>
       //   <Layout/>
       // </ProtectedRoute>,
       children: [
         {
           path: '/',
-          element: <Home/>
+          element: <Home />
         },
         {
           path: '/blogs',
-          element: <Blogs/>
+          element: <Blogs />
         },
         {
           path: '/blogs/:id',
-          element: <Blog/>
+          element: <Blog />
         },
         {
           path: '/about',
-          element: <About/>
+          element: <About />
         },
         {
           path: '/contact',
-          element: <Contact/>
+          element: <Contact />
         },
         {
           path: '/dashboard',
-          element: <Dashboard/>
+          element: <Dashboard />
         },
         {
           path: '/dashboard/login',
-          element: <Login/>
+          element: <Login />
         },
         {
           path: '/dashboard/register',
-          element: <Register/>
+          element: <Register />
         },
         {
           path: '/*',
-          element: <NotFound/>
+          element: <NotFound />
         }
       ]
     }
@@ -94,7 +95,9 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <RouterProvider router={router} />
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </div>
   )
 }

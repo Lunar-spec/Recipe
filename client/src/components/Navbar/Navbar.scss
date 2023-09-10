@@ -1,3 +1,11 @@
+.bg-light {
+    background: #eeeeeec4;
+}
+
+.bg-dark {
+    background: #232323c4;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -11,7 +19,7 @@
 }
 
 .nav-bg {
-    background-color: #232323f8;
+    // background: #232323fe;
     filter: drop-shadow(0 0 10px #7676765f);
 }
 

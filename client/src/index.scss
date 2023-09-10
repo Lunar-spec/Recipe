@@ -2,18 +2,11 @@
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;  
-  color: #eee;
-  background-color: #232323;
-}
-
-button,
-input {
-  font-family: 'Poppins', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #eee;
+  color: inherit;
 }
 
 body {
@@ -22,6 +15,20 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   min-height: 100vh;
+}
+
+.theme{
+  transition: .3s all ease;
+}
+
+.dark{
+  color: #eee;
+  background: #232323;
+}
+
+.light{
+  color: #232323;
+  background: #eee;
 }
 
 *::-webkit-scrollbar {
@@ -41,4 +48,8 @@ body {
 
 *::-webkit-scrollbar-corner {
   background: #232323;
+}
+
+button, input, textarea{
+  font-family: 'Poppins', sans-serif;
 }

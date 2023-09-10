@@ -1,0 +1,29 @@
+.switch-container{
+    width: 3rem;
+    height: 1.3rem;
+    border: 1.5px solid #DE3163;
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem;
+    position: relative;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px #DE3163);
+
+    .toggle-icon{
+        font-size: 1rem;
+    }
+
+    .ball{
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 4rem;
+        background: #DE3163;
+        position: absolute;
+
+        &:hover{
+            filter: drop-shadow(0 0 10px #f5497a);
+        }
+    }
+}
