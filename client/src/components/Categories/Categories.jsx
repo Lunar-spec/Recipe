@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import { IoMdArrowDroprightCircle } from 'react-icons/io'
-import './Categories.scss'
+import { IoIosArrowDropdownCircle, IoIosArrowDropupCircle } from 'react-icons/io';
+import { useState } from 'react'; // Import useState
+import './Categories.scss';
+
 
 const data = [
     {
@@ -21,12 +23,10 @@ const data = [
     {
         catName: 'Lunch',
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-        // image: 'https://images.unsplash.com/photo-1573225342350-16731dd9bf3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1962&q=80',
         url: '/blogs/lunch'
     },
     {
         catName: 'Dinner',
-        // image: 'https://images.unsplash.com/photo-1608835149345-b4d77bc490ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80',
         image: 'https://images.unsplash.com/photo-1571805381873-a5e51f692c16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
         url: '/blogs/dinner'
     },
@@ -57,7 +57,14 @@ const data = [
     },
 ];
 
+
 const Categories = () => {
+    // Add a state variable to control category display
+    const [showAllCategories, setShowAllCategories] = useState(false);
+
+    // Calculate the number of categories to display based on the state
+    const numCategoriesToShow = showAllCategories ? data.length : 5;
+
     return (
         <div className='categories-container'>
             <span className='heading'>Popular Categories
@@ -66,24 +73,24 @@ const Categories = () => {
                 </span>
             </span>
             <div className="card-container">
-                {
-                    data.map((item, index) => (
-                        <div key={index}>
-                            <Link to={item.url} className='card'>
-                                <div className='item-img'>
-                                    <img src={item.image} alt={item.catName} className='item-img' />
-                                </div>
-                                <span className='item-name'>{item.catName}</span>
-                            </Link>
-                        </div>
-                    ))
-                }
+                {data.slice(0, numCategoriesToShow).map((item, index) => (
+                    <div key={index}>
+                        <Link to={item.url} className='card'>
+                            <div className='item-img'>
+                                <img src={item.image} alt={item.catName} className='item-img' />
+                            </div>
+                            <span className='item-name'>{item.catName}</span>
+                        </Link>
+                    </div>
+                ))}
             </div>
-            <Link to={'/blogs'}>
-                <span className='view-btn'>View more<IoMdArrowDroprightCircle className='view-icon' /></span>
-            </Link>
+            {/* Toggle the state when "View more" is clicked */}
+            <span className='view-btn' onClick={() => setShowAllCategories(!showAllCategories)}>
+                {showAllCategories ? 'View less' : 'View more'}
+                {showAllCategories ? (<IoIosArrowDropupCircle className='view-icon' />) : (<IoIosArrowDropdownCircle className='view-icon' />)}
+            </span>
         </div>
-    )
+    );
 }
 
-export default Categories
+export default Categories;
