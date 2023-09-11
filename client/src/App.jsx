@@ -27,7 +27,7 @@ function App() {
 
   const Layout = () => {
     return (
-      <div className="content-container">
+      <div>
         <Navbar />
         <Outlet />
         <ScrollRestoration />

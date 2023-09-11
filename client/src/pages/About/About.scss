@@ -1,0 +1,69 @@
+.about-container {
+    // padding-top: 5rem;
+    text-align: left;
+    padding: 3rem 2rem 0 2rem;
+    letter-spacing: .15rem;
+    font-size: 1.15rem;
+
+    .about-heading {
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: .5rem;
+        margin: 1rem;
+        background: url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')fixed center;
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .mission-heading,
+    .sets-apart-heading,
+    .explore-heading,
+    .contact-heading {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        text-align: left;
+        list-style-type: disc;
+        margin-left: 20px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    a {
+        color: #DE3163;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .bon-appetit {
+        // font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        text-align: center;
+        font-size: 6rem;
+        margin: 2rem;
+        background: url('https://images.unsplash.com/photo-1586511925558-a4c6376fe65f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80')fixed center;
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .3rem;
+
+        @media screen and (max-width: 768px) {
+            margin: 0;
+            font-size: 4rem;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import data from '../../data.js'
 import Card from '../Card/Card.jsx'
 import './FeaturedRecipe.scss'
@@ -18,7 +19,9 @@ const FeaturedRecipe = () => {
                 }
             </div>
 
-            <button className='more-button'>Explore more...</button>
+            <Link to={'/blogs'}>
+                <button className='more-button'>Explore more...</button>
+            </Link>
         </div>
     )
 }
