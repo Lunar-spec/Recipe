@@ -1,71 +1,33 @@
 .footer {
-    // height: 14rem;
-    // background: #333;
-    // bottom: 0;
-    // width: 100vw;
     padding: 1rem;
-
-    .first-section {
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            padding: 0.5rem;
-
-            .newsletter-form {
-                margin: 0;
-                padding: 0;
-
-                input {
-                    padding: 0.7rem 1rem;
-                    outline: none;
-                    border: none;
-                    border-top-left-radius: 0.1rem;
-                    border-bottom-left-radius: 0.1rem;
-                    border-right: 0;
-                    width: 12rem;
-                }
-
-                button {
-                    padding: 0.7rem 1rem;
-                    outline: none;
-                    border: none;
-                    border-left: 0;
-                    border-top-right-radius: 0.1rem;
-                    border-bottom-right-radius: 0.1rem;
-                    cursor: pointer;
-                    color: inherit;
-                    background: #E0144C;
-                    transition: .3s ease-out;
-
-                    &:hover {
-                        background: #b2103c;
-                    }
-                }
-            }
-        }
-    }
 
     .second-section {
         .section {
             display: flex;
+            // height: 11rem;
             justify-content: space-between;
+            align-items: flex-start;
             align-items: center;
             padding: 1rem 2rem;
 
             .about {
-                max-width: 20rem;
+                max-width: 24rem;
+                height: 12rem;
                 letter-spacing: 0.02rem;
                 text-align: justify;
             }
 
             .links {
+                height: 12rem;
                 display: flex;
                 flex-direction: column;
                 gap: 0;
                 line-height: 1.5rem;
                 letter-spacing: 0.12rem;
+
+                @media screen and (max-width: 568px) {
+                    height: 9rem;
+                }
 
                 a {
                     border-bottom: 0.1rem solid transparent;
@@ -79,21 +41,31 @@
             }
 
             .socials {
+                height: 12rem;
+                // max-width: 20rem;
                 display: flex;
-                flex-direction: row;
-                font-size: 1.5rem;
+                flex-direction: column;
                 gap: 0.5rem;
 
-                .icons {
-                    cursor: pointer;
-                    transition: .3s ease-out;
-
-                    &:hover {
-                        color: #E0144C;
-                        filter: drop-shadow(0 0 0.5rem #e0144c);
-                    }
+                @media screen and (max-width: 568px) {
+                    height: 7rem;
                 }
 
+                .social-icons {
+                    display: flex;
+                    gap: 1rem;
+
+                    .icons {
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        transition: .3s ease-out;
+
+                        &:hover {
+                            color: #E0144C;
+                            filter: drop-shadow(0 0 0.5rem #e0144c);
+                        }
+                    }
+                }
             }
         }
 
@@ -105,16 +77,11 @@
 }
 
 @media screen and (max-width: 560px) {
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-
     .second-section {
         .section {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 3rem;
 
             h3 {
                 text-align: center;

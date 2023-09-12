@@ -1,7 +1,7 @@
 :root {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
-  font-weight: 400;  
+  font-weight: 400;
   cursor: default;
 }
 
@@ -18,16 +18,21 @@ body {
   min-height: 100vh;
 }
 
-.theme{
+.fancy {
+  color: #DE3163;
+  font-weight: 500;
+}
+
+.theme {
   transition: .3s all ease;
 }
 
-.dark{
+.dark {
   color: #eee;
   background: #232323;
 }
 
-.light{
+.light {
   color: #232323;
   background: #eee;
 }
@@ -51,6 +56,8 @@ body {
   background: #232323;
 }
 
-button, input, textarea{
+button,
+input,
+textarea {
   font-family: 'Poppins', sans-serif;
 }

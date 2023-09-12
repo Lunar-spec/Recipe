@@ -27,11 +27,6 @@
             text-align: center;
             width: 40%;
 
-            .fancy {
-                color: #DE3163;
-                font-weight: 500;
-            }
-
             @media screen and (max-width: 768px) {
                 font-size: 1.2rem;
                 width: 100%;
@@ -135,7 +130,7 @@
         }
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 568px) {
         .card-container {
             grid-template-columns: repeat(2, minmax(10rem, 1fr));
         }

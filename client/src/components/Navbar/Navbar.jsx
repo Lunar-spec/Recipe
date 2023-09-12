@@ -2,9 +2,9 @@ import { LuChefHat } from 'react-icons/lu'
 import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
+import { ThemeContext } from '../../context/ThemeContext'
 
 import './Navbar.scss'
-import { ThemeContext } from '../../context/ThemeContext'
 
 const links = [
     {

@@ -1,0 +1,91 @@
+.cat-container {
+    display: flex;
+    flex-direction: column;
+
+    .sweet-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .delicious-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #de3162cd;
+        text-transform: capitalize;
+    }
+
+    .card-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card-sweet {
+            position: relative;
+            margin: 1rem 3rem;
+            width: 310px;
+            height: 460px;
+
+            &:hover .item-img {
+                border: 0.1rem solid #DE3163;
+                transform: scale(1.05);
+            }
+
+            &:hover .item-title {
+                font-size: 1.4rem;
+                width: 60%;
+            }
+
+            .item-img {
+                width: 310px;
+                height: 460px;
+                object-fit: cover;
+                overflow: hidden;
+                border: 0.1rem solid transparent;
+                transition: .3s ease-out;
+            }
+
+            .item-title {
+                position: absolute;
+                top: 85%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.37);
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: 500;
+                width: 50%;
+                letter-spacing: .10rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
+                transition: .3s ease-out;
+            }
+
+            .item-rating {
+                position: absolute;
+                border-radius: .15rem;
+                color: #222;
+                letter-spacing: .12rem;
+                font-weight: 500;
+                top: 8%;
+                left: 15%;
+                background: #ffbf00dc;
+                padding: .5rem 1rem;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

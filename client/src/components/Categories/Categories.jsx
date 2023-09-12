@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { IoIosArrowDropdownCircle, IoIosArrowDropupCircle } from 'react-icons/io';
-import { useState } from 'react'; // Import useState
+import { useState } from 'react';
 import './Categories.scss';
 
 
@@ -59,10 +59,8 @@ const data = [
 
 
 const Categories = () => {
-    // Add a state variable to control category display
     const [showAllCategories, setShowAllCategories] = useState(false);
 
-    // Calculate the number of categories to display based on the state
     const numCategoriesToShow = showAllCategories ? data.length : 5;
 
     return (
@@ -84,7 +82,6 @@ const Categories = () => {
                     </div>
                 ))}
             </div>
-            {/* Toggle the state when "View more" is clicked */}
             <span className='view-btn' onClick={() => setShowAllCategories(!showAllCategories)}>
                 {showAllCategories ? 'View less' : 'View more'}
                 {showAllCategories ? (<IoIosArrowDropupCircle className='view-icon' />) : (<IoIosArrowDropdownCircle className='view-icon' />)}
