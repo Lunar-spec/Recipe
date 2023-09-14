@@ -41,12 +41,16 @@
 
             &:hover .item-img {
                 border: 0.1rem solid #DE3163;
-                transform: scale(1.05);
+                // transform: scale(1.05);
+                filter: drop-shadow(0 0 1rem #de31627a);
             }
 
             &:hover .item-title {
+                background: #de31627a;
                 font-size: 1.4rem;
-                width: 60%;
+                width: 50%;
+                padding: .5rem;
+                color: #fff;
             }
 
             .item-img {
@@ -63,13 +67,11 @@
                 top: 85%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background: rgba(0, 0, 0, 0.37);
-                color: #fff;
-                font-size: 1.2rem;
-                font-weight: 500;
+                color: #bbb;
+                font-size: 1.6rem;
+                font-weight: 600;
                 width: 50%;
                 letter-spacing: .10rem;
-                padding: 0.5rem 1rem;
                 border-radius: 0.25rem;
                 transition: .3s ease-out;
             }

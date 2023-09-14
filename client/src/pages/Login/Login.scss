@@ -1,0 +1,129 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#d51c535a, #d58b1c55), url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')fixed center;
+
+
+    .login-card {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        padding: 2rem;
+        border-radius: .5rem;
+        filter: drop-shadow(0 0 1rem #d51c531f);
+        overflow: hidden;
+        margin-top: 2rem;
+        background: linear-gradient(#d51c5321, #d58b1c36);
+
+        @media screen and (max-width: 500px) {
+            padding: 0;
+            width: 90%;
+        }
+
+        .card-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                letter-spacing: .3rem;
+                font-size: 3rem;
+                font-weight: 700;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 1rem 2rem;
+
+                .password {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    position: relative;
+
+                    .eye-icon {
+                        position: absolute;
+                        top: 22%;
+                        left: 90%;
+                        transform: translate(-50%, -50%);
+                        font-size: 1.3rem;
+                        filter: drop-shadow(0 0 1rem #d31e51);
+                        cursor: pointer;
+                    }
+
+                    .active {
+                        color: #d31e51;
+                    }
+                }
+
+                input {
+                    border: none;
+                    padding: .7rem 1.5rem;
+                    font-size: 1rem;
+                    color: inherit;
+                    background: transparent;
+                    border-bottom: .1rem solid #ccc;
+                    font-weight: 400;
+                    outline: none;
+
+                    &::placeholder {
+                        color: inherit;
+                        opacity: 0.5;
+                    }
+                }
+
+                button {
+                    width: 50%;
+                    padding: .7rem;
+                    border: none;
+                    border-radius: .2rem;
+                    color: inherit;
+                    font-weight: 500;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    outline: none;
+                    background: #c42c57;
+                    transition: .3s ease-out;
+
+                    &:hover {
+                        background: #aa264b;
+                    }
+                }
+            }
+        }
+
+        .card-right {
+            flex: 1;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: inherit;
+            gap: 2rem;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
+            h1 {
+                font-size: 6rem;
+                line-height: 6rem;
+                font-weight: 700;
+                letter-spacing: .3rem;
+
+                .fancy {
+                    font-weight: 700;
+                }
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}

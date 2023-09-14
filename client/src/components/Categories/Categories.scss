@@ -68,15 +68,17 @@
                     height: 10rem;
                     object-fit: cover;
                     transition: .3s ease-out;
-                    // transform: scale(1.25);
+                    border: none;
 
                     &:hover {
-                        transform: scale(1.2);
+                        border: none;
                     }
                 }
 
                 &:hover {
                     border: .1rem solid #DE3163;
+                    filter: drop-shadow(0 0 1rem #de31627a);
+
                 }
             }
 
