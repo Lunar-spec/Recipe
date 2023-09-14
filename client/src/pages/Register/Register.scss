@@ -12,10 +12,10 @@
         width: 50%;
         padding: 2rem;
         border-radius: .5rem;
-        filter: drop-shadow(0 0 1rem #d51c534b);
+        filter: drop-shadow(0 0 1rem #d51c531f);
         overflow: hidden;
         margin-top: 2rem;
-        background: linear-gradient(#d51c534b, #d58b1c36);
+        background: linear-gradient(#d51c5321, #d58b1c36);
 
         @media screen and (max-width: 500px) {
             padding: 0;
@@ -29,9 +29,9 @@
             justify-content: center;
 
             h1 {
-                letter-spacing: .4rem;
+                letter-spacing: .3rem;
                 font-size: 3rem;
-                font-weight: 600;
+                font-weight: 700;
             }
 
             form {

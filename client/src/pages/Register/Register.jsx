@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./Register.scss";
 import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
+import "./Register.scss";
 
 const initialUser = {
     name: "",
