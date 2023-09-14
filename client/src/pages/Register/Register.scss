@@ -53,6 +53,7 @@
                         transform: translate(-50%, -50%);
                         font-size: 1.3rem;
                         filter: drop-shadow(0 0 1rem #d31e51);
+                        cursor: pointer;
                     }
 
                     .active {
@@ -110,13 +111,13 @@
             }
 
             h1 {
-                font-size: 5rem;
-                line-height: 5.5rem;
-                font-weight: 600;
+                font-size: 6rem;
+                line-height: 6rem;
+                font-weight: 700;
                 letter-spacing: .3rem;
 
                 .fancy {
-                    font-weight: 600;
+                    font-weight: 700;
                 }
             }
 
