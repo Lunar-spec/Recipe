@@ -1,0 +1,22 @@
+.dashboard {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    .left-side {
+        flex:1;
+    }
+
+    .right-side {
+        flex:1;
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}
